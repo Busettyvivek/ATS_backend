@@ -40,11 +40,9 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 // Swagger only in Development
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
+   app.UseSwagger();
     app.UseSwaggerUI();
-}
+
 
 app.UseHttpsRedirection();
 
